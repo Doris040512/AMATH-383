@@ -46,9 +46,7 @@ To test these hypotheses, the notebook fits three models:
 ## 📊 Summary of Models and Results
 
 ### **Model 1 — Temperature-Driven Linear Regression**
-\[
-\widehat{\text{ILI}}(t) = \beta_0 + \alpha_T \,(T_\mathrm{ref} - T(t))
-\]
+ILI_hat(t) = beta0 + alpha_T * (T_ref - T(t))
 
 - Captures the rise in cases during colder weeks  
 - **Train RMSE: 30.1**  
@@ -58,9 +56,7 @@ To test these hypotheses, the notebook fits three models:
 ---
 
 ### **Model 2 — Pure Seasonal Cosine Model**
-\[
-\widehat{\text{ILI}}(t) = \beta_0 + \delta \cos(2\pi t / 52)
-\]
+ILI_hat(t) = beta0 + δ * cos(2π t / 52)
 
 - Matches the broad yearly cycle but  
 - Fails to capture sharp winter peaks  
@@ -70,9 +66,7 @@ To test these hypotheses, the notebook fits three models:
 ---
 
 ### **Model 3 — Mechanistic SIR Model (Temperature-Driven β)**
-\[
-\beta(t) = \beta_0 + \alpha (50 - T(t))
-\]
+beta(t) = beta0 + alpha * (50 - T(t))
 
 - Uses the full SIR differential equation system  
 - Produces a smooth epidemic curve  
